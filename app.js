@@ -68,9 +68,9 @@ const sessionOptions = {
 };
 
 //Root
-// app.get("/", (req, res) => {
-//     res.redirect("/listings");
-// })
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+})
 
 
 //Use session
