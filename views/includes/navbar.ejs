@@ -6,49 +6,78 @@
         padding: 0 1rem 0 1rem;
         font-size: 0.9rem;
     }
+
     .search-btn:hover {
         background-color: red;
         color: white;
     }
+
     .search-btn i {
         display: inline;
         margin-right: 0.3rem;
     }
+
     .search-input {
         border-radius: 25px;
-        padding: 0.5rem 3rem 0.5rem 4rem;
+        width: 15rem;
+        padding: 0.5rem 0.1rem 0.5rem 0.5rem;
         font-size: 0.9rem;
+    }
+
+    .tax-toggle {
+        border: 1px solid lightgrey;
+        border-radius: 1rem;
+        height: 3rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
     }
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="/listings"><i class="fa-brands fa-neos"></i></a>
+        <a class="nav-link" href="/listings">Explore</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <form class="d-flex ms-auto" role="search" action="/listings" method="GET">
+                <input class="form-control me-2 search-input" type="search" name="country"
+                    placeholder="Search destinations based on country" />
+                <button class="btn search-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <div class="tax-toggle navbar-nav ms-auto me-auto mt-1">
+                <div class="form-check-reverse form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                    <label class="form-check-label" for="switchCheckDefault">
+                        Display total after taxes
+                    </label>
+                </div>
+            </div>
+
             <div class="navbar-nav">
-                <a class="nav-link" href="/listings">Explore</a>
-            </div>
-
-            <div class="navbar-nav ms-auto">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 search-input" type="search" placeholder="Search destinations"/>
-                    <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-                </form>
-            </div>
-
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new">Nestify your home</a>
                 <% if(currUser) { %>
-                    <a class="nav-link" href="/logout"><b>logout</b></a>
-                <% } %>
-                <% if(!currUser) { %>
-                    <a class="nav-link" href="/signup"><b>Sign Up</b></a>
-                    <a class="nav-link" href="/login"><b>Log in</b></a>
-                <% } %>
+                    <form method="get" action="/profile">
+                        <a class="nav-link" href="/profile"><b><i class="fa-regular fa-user" style="color: red;"></i>
+                            <%=currUser.username %>
+                        </b></a>
+                    </form>
+                    <% } %>
+                        <a class="nav-link" href="/listings/new"><b>Nestify your home</b></a>
+                        <% if(currUser) { %>
+                            <a class="nav-link" href="/logout"><b>logout</b></a>
+                            <% } %>
+                                <% if(!currUser) { %>
+                                    <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+                                    <a class="nav-link" href="/login"><b>Log in</b></a>
+                                    <% } %>
             </div>
+
         </div>
     </div>
 </nav>

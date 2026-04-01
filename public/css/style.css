@@ -11,8 +11,12 @@ body {
 
 /* Navbar */
 .navbar {
-    height: 5rem;
+    z-index: 1000;
     background-color: white;
+}
+
+.navbar-collapse {
+  background-color: white;
 }
 
 .fa-neos {
@@ -37,6 +41,7 @@ body {
 }
 .f-info-socials i {
     font-size: 1.2rem;
+    color: #222222;
 }
 .f-info {
     display: flex;

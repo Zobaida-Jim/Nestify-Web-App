@@ -3,21 +3,16 @@ const Listing = require("../models/listing");
 //Index
 module.exports.index = async (req, res) => {
     let { category, country } = req.query;
-
     let filter = {};
-
     // category filter
     if (category) {
         filter.category = category;
     }
-
     // country search (case-insensitive)
     if (country) {
         filter.country = { $regex: country, $options: "i" };
     }
-
     let allListings = await Listing.find(filter);
-
     res.render("listings/index.ejs", { 
         allListings,
         category,

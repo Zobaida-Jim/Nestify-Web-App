@@ -117,6 +117,19 @@ app.use("/listings/:id/reviews", reviewRouter);
 //For User
 app.use("/", userRouter); 
 
+app.get("/privacy", (req, res) => {
+    res.render("./footers/privacy.ejs");
+})
+app.get("/terms", (req, res) => {
+    res.render("./footers/terms.ejs");
+})
+
+//Profile
+app.get("/profile", (req, res) => {
+    const user = req.user;
+    res.render("./listings/profile.ejs", {user});
+})
+
 //For invalid Route
 app.use((req, res, next) => {
     next(new ExpressError(404, "Page not found!"));
