@@ -16,7 +16,7 @@ body {
 }
 
 .navbar-collapse {
-  background-color: white;
+    background-color: white;
 }
 
 .fa-neos {
@@ -29,20 +29,26 @@ body {
     text-decoration: none;
     color: #222222;
 }
+
 .f-info-links a:hover {
     text-decoration: underline;
 }
-.f-info-links, .f-info-socials, .f-info-brand {
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
     width: 100%;
     vertical-align: middle;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .f-info-socials i {
     font-size: 1.2rem;
     color: #222222;
 }
+
 .f-info {
     display: flex;
     background-color: #ebebeb;
@@ -81,6 +87,7 @@ body {
 .card-img-overlay {
     opacity: 0;
 }
+
 .card-img-overlay:hover {
     opacity: 0.2;
     background-color: white;
@@ -100,7 +107,7 @@ body {
 
 /* Show Page */
 .show-img {
-     height: 30vh;
+    height: 30vh;
 }
 
 .btns {
@@ -110,4 +117,10 @@ body {
 .show-card {
     padding-left: 0;
     padding-right: 0;
+}
+
+/* Map */
+#map {
+    width: 80vh;
+    height: 400px;
 }
