@@ -21,7 +21,7 @@ You can view the live project here: https://nestify-web-app.onrender.com/listing
 - Flash messages for user feedback  
 - Session management with persistent login  
 - MVC architecture for clean and scalable code  
-- Responsive and smooth navigation bar  
+- Responsive design with smooth navigation bar 
 
 ---
 
