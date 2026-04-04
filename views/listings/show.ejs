@@ -7,28 +7,16 @@
 
     <div class="row mt-3">
         <div class="col-8 offset-3">
-            <h3>
-                <%= listing.title %>
-            </h3>
+            <h3><%= listing.title %></h3>
         </div>
         <div class="card col-6 offset-3 show-card listing-card">
             <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing Image">
             <div class="card-body">
                 <p class="card-text">
-                    <i>Owned by : </i>
-                    <b>@<i>
-                            <%=listing.owner.username %>
-                        </i></b><br>
-                    <%= listing.description %> <br>
-                        <b>
-                            <%= listing.price.toLocaleString("en-BD")%> BDT
-                        </b><br>
-                        <b>
-                            <%= listing.location %>
-                        </b><br>
-                        <b>
-                            <%= listing.country %>
-                        </b><br>
+                    <i>Owned by : </i><b>@<i><%=listing.owner.username %></i></b><br><%= listing.description %> <br>
+                    <b><%= listing.price.toLocaleString("en-BD")%> BDT</b><br>
+                    <b><%= listing.location %></b><br>
+                    <i class="fa-solid fa-location-dot"></i><b><%= listing.country %></b><br>
                 </p>
             </div>
         </div>
@@ -86,13 +74,10 @@
                                     <div class="card col-5 mb-3 ms-3">
                                         <div class="card-body">
                                             <h5 class="card-title">@<i><b>
-                                                        <%= review.author.username %>
-                                                    </b></i></h5>
+                                                        <%= review.author.username %></b></i></h5>
                                             <p class="starability-result card-text" data-rating="<%= review.rating %>">
                                             </p>
-                                            <p class="card-text">
-                                                <%= review.comment %>
-                                            </p>
+                                            <p class="card-text"><%= review.comment %></p>
                                         </div>
                                         <% if(currUser && currUser._id.equals(review.author._id)) { %>
                                             <form class="mb-2 mt-2" method="post"

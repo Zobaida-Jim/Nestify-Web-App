@@ -23,6 +23,14 @@ body {
     color: red;
     font-size: 2rem;
 }
+.navbar-btn {
+    height: 2.7rem;
+    margin-left: 0.5rem;
+}
+
+.navbar-btn:hover {
+    border-radius: 20px;
+}
 
 /* Footer */
 .f-info-links a {

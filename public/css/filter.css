@@ -1,0 +1,49 @@
+#filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: center;
+    scrollbar-width: none;
+    background-color: rgb(246, 248, 249);
+    border-radius: 25px;
+    box-shadow: 0 0.2px gray;
+}
+
+.filter {
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.6;
+    text-decoration: none;
+    color: black;
+    min-width: 80px;
+    flex: 0 0 auto;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.tax-info {
+    display: none;
+}
+
+.filter.active {
+    color: red;
+    transform: scale(1.15);
+    border-bottom: 3px solid red;
+    opacity: 1;
+}
+
+.filter {
+    transition: all 0.2s ease-in-out;
+}
+
+.filter.active i {
+    color: red;
+}
