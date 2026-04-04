@@ -7,7 +7,7 @@ Nestify is a full-stack web application inspired by Airbnb. It was built as a we
 ## Live Demo
 
 You can view the live project here: https://nestify-web-app.onrender.com/listings
-Demo Video : https://youtu.be/IOz7RCmi9Qc
+Demo Video : https://youtu.be/BRwpaH-uZgg
 
 ---
 
@@ -22,7 +22,8 @@ Demo Video : https://youtu.be/IOz7RCmi9Qc
 - Flash messages for user feedback  
 - Session management with persistent login  
 - MVC architecture for clean and scalable code  
-- Responsive design with smooth navigation bar 
+- Responsive design with smooth navigation bar
+- Implements proper error handling for both client-side form validation and server-side API/database operations.
 
 ---
 
