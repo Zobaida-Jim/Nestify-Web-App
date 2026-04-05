@@ -43,7 +43,6 @@ Session Management: express-session, connect-mongo
 
 ```plaintext
 Nestify/
-│
 ├── controllers/
 │   ├── listings.js
 │   ├── review.js
@@ -61,8 +60,10 @@ Nestify/
 │
 ├── public/
 │   ├── CSS/
-│   │   ├── style.js
-│   │   └── rating.js
+│   │   ├── style.css
+│   │   ├── rating.css
+│   │   ├── filter.css
+│   │   └── navbar.css
 │   │
 │   └── JS/
 │       ├── map.js
@@ -76,7 +77,8 @@ Nestify/
 │   ├── includes/
 │   │   ├── flash.ejs
 │   │   ├── footer.ejs
-│   │   └── navbar.ejs
+│   │   ├── navbar.ejs
+│   │   └── filter.ejs
 │   │
 │   ├── layouts/
 │   │   └── boilerplate.ejs
@@ -101,4 +103,5 @@ Nestify/
 ├── cloudConfig.js
 ├── middleware.js
 ├── Schema.js
-└── package.json 
+├── package.json
+└── package-lock.json
