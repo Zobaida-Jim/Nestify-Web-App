@@ -195,3 +195,15 @@
   -webkit-transition: background-position .7s;
   transition: background-position .7s;
 }
+
+/* Make review stars smaller */
+.starability-result {
+    transform: scale(0.4);
+    transform-origin: left;
+}
+
+@media (max-width: 768px) {
+    .starability-result {
+        transform: scale(0.2);
+    }
+}
