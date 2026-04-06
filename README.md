@@ -39,6 +39,29 @@ Session Management: express-session, connect-mongo
 
 ---
 
+## Environment Variables
+
+CLOUD_NAME=your_cloudinary_cloud_name
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_API_SECRET=your_cloudinary_api_secret
+MAP_TOKEN=your_mapbox_token
+ATLASDB_URL=your_mongodb_atlas_url
+SECRET=your_secret_key
+
+---
+
+## Run the App
+
+nodemon app.js
+visit : http://localhost:8080/listings
+
+---
+
+## Author
+
+Zobaida Jim
+LinkedIn : https://www.linkedin.com/in/zobaida-jim/
+
 ## Project Structure
 
 ```plaintext
