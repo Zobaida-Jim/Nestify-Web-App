@@ -207,3 +207,20 @@
         transform: scale(0.2);
     }
 }
+
+.starability-result {
+    font-size: 0.9rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .starability-result {
+        font-size: 0.8rem;
+    }
+}
+
+.review-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
