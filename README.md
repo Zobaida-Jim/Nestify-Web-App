@@ -39,28 +39,46 @@ Session Management: express-session, connect-mongo
 
 ---
 
-## Environment Variables
+### Environment Variables
 
+Create a `.env` file and add:
+
+```
 CLOUD_NAME=your_cloudinary_cloud_name
 CLOUD_API_KEY=your_cloudinary_api_key
 CLOUD_API_SECRET=your_cloudinary_api_secret
+
 MAP_TOKEN=your_mapbox_token
-ATLASDB_URL=your_mongodb_atlas_url
-SECRET=your_secret_key
+
+ATLAS_DB_URL=your_mongodb_atlas_url
+
+SESSION_SECRET=your_secret_key
+```
+
 
 ---
 
 ## Run the App
 
+Start the server using:
+
+```
 nodemon app.js
-visit : http://localhost:8080/listings
+```
+
+Then open your browser and visit:
+
+```
+http://localhost:8080/listings
+```
 
 ---
 
 ## Author
 
-Zobaida Jim
-LinkedIn : https://www.linkedin.com/in/zobaida-jim/
+**Zobaida Jim**
+[LinkedIn](https://www.linkedin.com/in/zobaida-jim/)
+
 
 ## Project Structure
 
